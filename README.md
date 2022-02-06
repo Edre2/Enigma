@@ -10,9 +10,11 @@ Pour utiliser ce projet :
 git clone https://github.com/edre2/enigma
 cd enigma
 # En c++
+cd c++
 g++ main.cpp -O2 -Wall -Wextra -Werror -o test
 ./test
 # En python
+cd python
 python3 main.py
 ```
 
