@@ -16,6 +16,8 @@ g++ main.cpp -O2 -Wall -Wextra -Werror -o test
 # En python
 cd python
 python3 main.py
+# En javascript
+firefox javascript/test.html
 ```
 
 ## Code
@@ -60,4 +62,23 @@ a.position_initiale();
 
 // On peut alors décoder le texte
 cout << a.coder(code) << endl;
+```
+
+En `javascript` :
+``` javascript
+// Il faut choisir la taille de l'alphabet avec lequel on veut travailler
+// Dans cet exemple, elle est de 4 : la taille des rotors et du reflecteur
+// il faut donc qu'ils contiennent les lettres A,B,C et D
+a = new Enigma(["bcda" ,"dcba"], "badc");
+// ["bcda","dcba"] : rotors, "badc" : reflecteur
+
+// On code un texte
+let code = a.coder("ABDDBBABBD");
+console.log(code);
+
+// On fait reprendre sa position initiale à la machine
+a.position_initiale();
+
+// On peut alors décoder le texte
+console.log(a.coder(code));
 ```
