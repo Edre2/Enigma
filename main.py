@@ -1,10 +1,10 @@
 from enigma import *
 
 # On crée une machine enigma           
-a = Enigma(["bcda","dcba","dcba","dcba"], "badc")
+a = Enigma(["bcda","dcba"], "badc")
 
 # On code un texte
-code = a.coder("AB BBA")
+code = a.coder("ABDDBBABBD")
 print(code)
 
 # On fait reprendre sa position initiale à la machine

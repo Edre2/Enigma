@@ -19,7 +19,7 @@ class Enigma:
         # Position des rotors (0 = il n'a pas bougé, 1 = il a tourné 1 fois ..)
         self.__rotor_rotation = [0] * self.__N_rotors
 
-        # ON ajoute le reflecteur après avoir vérifier qu'il avait la bonne taille
+        # On ajoute le reflecteur après avoir vérifier qu'il avait la bonne taille
         if len(reflecteur) != self.__N:
             raise Exception("Le reflecteur doit être de la même taille que les rotors")
 
@@ -74,5 +74,6 @@ class Enigma:
         # Pour chaque rotor :
         for i in range(self.__N_rotors):
             # On le fait tourner assez de fois pour qu'il retrouve sa position initiale :
-            for j in range(self.__N - self.__rotor_rotation[i] % self.__N):
+            for j in range((self.__N - self.__rotor_rotation[i]) % self.__N):
                 self.__rotors[i].tourner()
+            self.__rotor_rotation[i] = 0
