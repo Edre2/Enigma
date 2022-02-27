@@ -1,6 +1,3 @@
-import { Rotor } from "./rotor";
-import { Reflecteur } from "./reflecteur";
-
 class Enigma {
     constructor(rotors, reflecteur) {
         this.rotors = new Array();
@@ -31,7 +28,7 @@ class Enigma {
         this.rotor_rotation[0]++;
         
         let i = 0;
-        while ((this.rotor_rotation[i] % this.N == 0) && (i != self.N_rotors)) {
+        while ((this.rotor_rotation[i] % this.N == 0) && (i < self.N_rotors - 1)) {
             this.rotor_rotation[i] = 0;
             this.rotors[i+1].tourner();
             this.rotor_rotation[i+1]++;
@@ -77,5 +74,3 @@ class Enigma {
         }
     }
 }
-
-export { Enigma, Rotor, Reflecteur };

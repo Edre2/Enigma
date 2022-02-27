@@ -67,7 +67,7 @@ class Enigma
 
             // Si le rotor a fait un nombre de tours divisible par le nombre de lettres par rotor, on fait tourner celui d'après
             int i = 0;
-            while ( (m_position_rotors[i] % m_N == 0) && (i != m_N_rotors))
+            while ( (m_position_rotors[i] % m_N == 0) && (i < m_N_rotors - 1))
             {
                 m_position_rotors[i] = 0;
                 m_rotors[i+1].tourner();

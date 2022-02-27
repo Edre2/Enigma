@@ -63,7 +63,7 @@ class Enigma:
 
         # Si le rotor a fait un nombre de tours divisible par le nombre de lettres par rotor, on fait tourner celui d'après
         i = 0
-        while (self.__rotor_rotation[i] % self.__N == 0) and (i != self.__N_rotors - 1):
+        while (self.__rotor_rotation[i] % self.__N == 0) and (i < self.__N_rotors - 1):
             self.__rotor_rotation[i] = 0
             self.__rotors[i+1].tourner()
             self.__rotor_rotation[i+1] += 1

@@ -38,5 +38,3 @@ class Rotor {
         return this.rotor_position.indexOf(nombre);
     }
 }
-
-export { Rotor };

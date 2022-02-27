@@ -28,5 +28,3 @@ class Reflecteur {
         return this.reflecteur_position[nombre];
     }
 }
-
-export { Reflecteur };
